@@ -1,0 +1,21 @@
+﻿using SehrimiTani.BusinessLayer;
+using SehrimiTani.Entities;
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Web;
+using System.Web.Mvc;
+
+namespace WebProject.Controllers
+{
+    public class YorumlarController : Controller
+    {
+        private YorumlarManager yorum = new YorumlarManager();
+        // GET: Yorumlar
+        public ActionResult Index()
+        {
+
+            return View();
+        }
+    }
+}

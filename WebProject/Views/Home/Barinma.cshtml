@@ -1,0 +1,53 @@
+﻿@using SehrimiTani.Entities
+@model List<Barinma>
+@{
+    ViewBag.Title = "Barinma";
+}
+
+<section class="ftco-section">
+    <div class="container-fluid">
+
+        <div class="row no-gutters" style="margin-left:200px;margin-top:-90px; ">
+            @foreach (Barinma barinma in Model)
+            {
+                <div class="col-md-6 col-lg-3 ftco-animate" style="margin-right:10px;margin-left:20px;margin-bottom:10px;">
+                    
+                        @if (barinma.Id == 1)
+                        {
+                            <a href="/Home/BarinmaList" class="block-5" style="background-image: url('/images/sah-cihan-kız-yurdu.png');"></a>
+                        }
+                        @if (barinma.Id == 2)
+                        {
+                            <a href="/Home/BarinmaList" class="block-5" style="background-image: url('/images/kabakli.jpg');"></a>
+                        }
+                        <div class="text">
+
+
+                            <h3 class="heading">@barinma.Adres</h3>
+
+                            <div class="post-meta">
+                                <span>
+
+                                    @barinma.ModifiedOn.ToString("dd.MM.yy HH:mm")
+
+                                </span>
+                            </div>
+                            <p class="star-rate">
+                                <span class="icon-star">
+                                </span><span class="icon-star"></span>
+                                <span class="icon-star"></span>
+                                <span class="icon-star"></span><span class="icon-star-half-full"></span>Yorumlar
+
+                                <span class="glyphicon glyphicon-star-empty"></span>
+
+                            </p>
+                        </div>
+                   
+                </div>
+
+            }
+
+        </div>
+
+    </div>
+</section>

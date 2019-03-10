@@ -1,0 +1,12 @@
+C:\Users\OnderSahin\source\repos\WebProject\SehrimiTani.Entities\bin\Debug\SehrimiTani.Entities.dll
+C:\Users\OnderSahin\source\repos\WebProject\SehrimiTani.Entities\bin\Debug\SehrimiTani.Entities.pdb
+C:\Users\OnderSahin\source\repos\WebProject\SehrimiTani.Entities\obj\Debug\SehrimiTani.Entities.csprojAssemblyReference.cache
+C:\Users\OnderSahin\source\repos\WebProject\SehrimiTani.Entities\obj\Debug\SehrimiTani.Entities.csproj.CoreCompileInputs.cache
+C:\Users\OnderSahin\source\repos\WebProject\SehrimiTani.Entities\obj\Debug\SehrimiTani.Entities.dll
+C:\Users\OnderSahin\source\repos\WebProject\SehrimiTani.Entities\obj\Debug\SehrimiTani.Entities.pdb
+C:\Users\onura\Desktop\WebProject\SehrimiTani.Entities\bin\Debug\SehrimiTani.Entities.dll
+C:\Users\onura\Desktop\WebProject\SehrimiTani.Entities\bin\Debug\SehrimiTani.Entities.pdb
+C:\Users\onura\Desktop\WebProject\SehrimiTani.Entities\obj\Debug\SehrimiTani.Entities.csprojResolveAssemblyReference.cache
+C:\Users\onura\Desktop\WebProject\SehrimiTani.Entities\obj\Debug\SehrimiTani.Entities.csproj.CoreCompileInputs.cache
+C:\Users\onura\Desktop\WebProject\SehrimiTani.Entities\obj\Debug\SehrimiTani.Entities.dll
+C:\Users\onura\Desktop\WebProject\SehrimiTani.Entities\obj\Debug\SehrimiTani.Entities.pdb

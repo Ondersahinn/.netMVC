@@ -1,0 +1,102 @@
+﻿@model SehrimiTani.Entities.Gezilecekyer
+
+@{
+    Layout = null;
+}
+<div class="row" style="margin-left:350px;margin-top:150px;">
+    <div class="col-md-8 col-md-offset-1">
+        <h2>Delete</h2>
+        <h3>Bunu silmek istediğinizden emin misiniz?</h3>
+        <hr />
+    </div>
+
+</div>
+
+<div class="row" style="font-size:18px; margin-left:350px; ">
+    <div class="col-md-11 col-md-offset-1" style="margin-right:0px">
+        <div class="row">
+            <h4>Gezilecekyer</h4>
+            <hr />
+            <dl class="dl-horizontal">
+                <dt>
+                    @Html.DisplayNameFor(model => model.Baslik)
+                </dt>
+
+                <dd>
+                    @Html.DisplayFor(model => model.Baslik)
+                </dd>
+
+                <dt>
+                    @Html.DisplayNameFor(model => model.Resim)
+                </dt>
+
+                <dd>
+                    @Html.DisplayFor(model => model.Resim)
+                </dd>
+
+                <dt>
+                    @Html.DisplayNameFor(model => model.Icerik)
+                </dt>
+
+                <dd>
+                    @Html.DisplayFor(model => model.Icerik)
+                </dd>
+
+                <dt>
+                    @Html.DisplayNameFor(model => model.CreatedOn)
+                </dt>
+
+                <dd>
+                    @Html.DisplayFor(model => model.CreatedOn)
+                </dd>
+
+                <dt>
+                    @Html.DisplayNameFor(model => model.ModifiedOn)
+                </dt>
+
+                <dd>
+                    @Html.DisplayFor(model => model.ModifiedOn)
+                </dd>
+
+                <dt>
+                    @Html.DisplayNameFor(model => model.ModifiedUsername)
+                </dt>
+
+                <dd>
+                    @Html.DisplayFor(model => model.ModifiedUsername)
+                </dd>
+
+            </dl>
+
+            @using (Html.BeginForm())
+            {
+                @Html.AntiForgeryToken()
+
+            <div class="form-actions no-color">
+
+                <input type="submit" value="Delete" class="btn btn-dark" /> |
+             
+                @Html.ActionLink("Back to List", "Index", "Gezilecekyer", null, new { @class = "btn btn-dark" })
+
+            </div>
+            }
+        </div>
+    </div>
+    </div>
+
+<script>
+
+    function hideSlider() {
+        var element = document.getElementById('Silider');
+        var menu = document.getElementById("ftco-navbar");
+        var foter = document.getElementById("ftco-footer");
+
+
+
+        element.hidden = true;
+        menu.hidden = true;
+        foter.hidden = true;
+    };
+    window.onload = hideSlider();
+</script>
+

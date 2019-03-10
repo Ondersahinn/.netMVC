@@ -1,0 +1,69 @@
+﻿@using WebProject.ViewModels
+@model InfoViewModel
+@{
+    ViewBag.Title = Model.Title;
+}
+
+<link href="~/css/css/login-register.css" rel="stylesheet" />
+<script src="~/css/css/login-register.js"></script>
+<!------ Include the above in your HEAD tag ---------->
+<!-- <input type="text" name="display_name" id="display_name" class="form-control input-lg" placeholder="Kullanıcı Adınız" tabindex="3">-->
+<!-- input type="password" name="password" id="password" class="form-control input-lg" placeholder="Şifre" tabindex="5">  -->
+
+
+<div class="container" style="margin:auto;width: 70%;margin-left:400px;margin-bottom:20px;margin-top:50px">
+    <div class="row">
+        <div class="col-xs-12 col-sm-8 col-md-6 col-sm-offset-2 col-md-offset-3">
+            <form role="form">
+                <h1 class="text-center">@Model.Header</h1>
+                <hr class="colorgraph">
+
+                <div class="form-group">
+                    <h2><span class="glyphicon glyphicon-ok">@Model.Title</span></h2>
+                </div>
+
+                <div class="row">
+                    <div>
+                        <hr />
+                        <div style="padding-left:30px;color:black">
+                            <p class="text-justify">
+                                @foreach (string msg in Model.Items)
+                                {
+                                @msg<br>
+                                }
+                            </p>
+                        </div>
+                    </div>
+
+                </div>
+
+
+
+            </form>
+        </div>
+    </div>
+
+
+
+</div>
+@{
+    string js = string.Empty;
+
+    if (Model.IsRedirecting)
+    {
+        js = "setTimeout(function () { window.location = '" + Model.RedirectingUrl + "'; }, " +
+            Model.RedirectingTimeout + ");";
+    }
+}
+
+<script>
+    function hideSlider() {
+
+        var element = document.getElementById('Silider');
+        var menu = document.getElementById("ftco-navbar");
+        menu.hidden = true;
+        element.hidden = true;
+          @Html.Raw(js);
+    };
+    window.onload = hideSlider();
+</script>

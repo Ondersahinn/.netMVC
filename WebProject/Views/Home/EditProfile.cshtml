@@ -1,0 +1,98 @@
+﻿@using SehrimiTani.Entities
+@model Kullanicilar
+@{
+    ViewBag.Title = "Profil Düzenle";
+}
+
+
+
+<link href="//netdna.bootstrapcdn.com/bootstrap/3.1.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+<script src="//netdna.bootstrapcdn.com/bootstrap/3.1.0/js/bootstrap.min.js"></script>
+<script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
+@using (Html.BeginForm("EditProfile", "Home", FormMethod.Post, new { enctype = "multipart/form-data" }))
+{
+    <!------ Include the above in your HEAD tag ---------->
+    <div class="container">
+        <div class="row">
+
+            <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6 col-xs-offset-0 col-sm-offset-0 col-md-offset-3 col-lg-offset-3 toppad">
+
+
+                <div class="panel panel-info">
+                    <div class="panel-heading">
+                        <h3 class="panel-title">Kullanıcı Bilgileri</h3>
+                    </div>
+                    <div class="panel-body">
+                        <div class="row">
+                            <div class="col-md-3 col-lg-3"style="margin-left:180px">
+                                <img src="~/images/@Model.ProileImagerFilename" class="img-circle" width="128" height="128" />
+                                @Html.HiddenFor(model => model.ProileImagerFilename)
+                                <input type="file" name="ProfileImage" id="ProfileImage" class="form-control" style="width:150" /><br />
+                                <span class="glyphicon glyphicon-info-sign">&nbsp;</span>
+                                <span><i>Lütfen jpg, jpeg ya da png formatı kullanın.</i></span>
+                            </div>
+
+                            @Html.ValidationSummary(false)
+                            @Html.HiddenFor(model => model.Id)
+
+                            <div class=" col-md-9 col-lg-9 ">
+                                <table class="table table-user-information">
+                                    <tbody>
+                                        <tr>
+                                            <td>Kullanıcı Adınız:</td>
+                                            <td> @Html.EditorFor(model => model.Kuladi, new { htmlAttributes = new { @class = "form-control input-lg" } })</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Adı</td>
+                                            <td> @Html.EditorFor(model => model.Adi, new { htmlAttributes = new { @class = "form-control input-lg" } })</td>
+
+                                        </tr>
+                                        <tr>
+                                            <td>Soaydı:</td>
+                                            <td> @Html.EditorFor(model => model.Soyadi, new { htmlAttributes = new { @class = "form-control input-lg" } })</td>
+
+                                        </tr>
+
+                                        <tr>
+                                            <td>Email:</td>
+                                            <td> @Html.EditorFor(model => model.Email, new { htmlAttributes = new { @class = "form-control input-lg" } })</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Şifre:</td>
+                                            <td> @Html.EditorFor(model => model.Sifre, new { htmlAttributes = new { @class = "form-control input-lg" } })</td>
+                                        </tr>
+
+                                        <tr>
+                                        <tr>
+                                            <td>Telefon:</td>
+                                            <td> @Html.EditorFor(model => model.Telefon, new { htmlAttributes = new { @class = "form-control input-lg" } })</td>
+                                        </tr>
+
+
+
+
+                                    </tbody>
+                                </table>
+
+
+                            </div>
+                        </div>
+                        <div class="col-xs-12 col-md-6" style="margin-left:100px;"><button type="submit" class="btn btn-success btn-block btn-lg">Güncelle</button></div>
+                    </div>
+
+
+                </div>
+            </div>
+
+        </div>
+    </div>}
+<script>
+
+    function hideSlider() {
+        var element = document.getElementById('Silider');
+        var menu = document.getElementById("ftco-navbar");
+
+        element.hidden = true;
+    };
+    window.onload = hideSlider();
+</script>

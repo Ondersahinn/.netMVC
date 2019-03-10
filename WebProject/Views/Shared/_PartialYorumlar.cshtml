@@ -1,0 +1,50 @@
+﻿@using WebProject.Models
+@using SehrimiTani.Entities
+
+@{
+    List<Yorumlar> list = CacheHelper.GetCategoriesFromCache();
+}
+
+
+<link href="~/css/Yorumcss.css" rel="stylesheet" />
+<div class="comments">
+    <div class="comment-wrap">
+        @Html.ValidationSummary(false)
+        <div class="photo">
+            <div class="avatar" style="background-image: url('https://s3.amazonaws.com/uifaces/faces/twitter/dancounsell/128.jpg')"></div>
+        </div>
+        <div class="comment-block">
+            <form action="">
+
+                <textarea name="" id="" cols="30" rows="3" placeholder="Add comment..."></textarea>
+
+                <textarea name="" id="" cols="30" rows="3" placeholder="Add comment..."></textarea>
+            </form>
+        </div>
+    </div>
+</div>
+@foreach (Yorumlar yorumlar in list)
+{
+
+    <div class="comments">
+
+        <div class="comment-wrap">
+            <div class="photo">
+                <div class="avatar" style="background-image: url('https://s3.amazonaws.com/uifaces/faces/twitter/jsa/128.jpg')"></div>
+            </div>
+            <div class="comment-block">
+                <p class="comment-text">
+                    @yorumlar.Icerik
+                </p>
+                <div class="bottom-comment">
+                    <div class="comment-date">@yorumlar.ModifiedOn</div>
+                    <ul class="comment-actions">
+                        <li class="complain">@yorumlar.ModifiedUsername</li>
+                        <li class="reply"></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+    </div>
+}

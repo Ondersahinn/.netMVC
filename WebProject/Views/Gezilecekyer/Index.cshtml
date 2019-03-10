@@ -1,0 +1,95 @@
+﻿@model IEnumerable<SehrimiTani.Entities.Gezilecekyer>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+
+<div class="row" style="margin-left:350px;margin-top:150px;">
+    <div class="col-md-8 col-md-offset-1">
+        <h2>Gezilecek Yer Listesi</h2>
+        <hr />
+    </div>
+
+</div>
+<div class="">
+    <div class="col-md-11 col-md-offset-1" style="margin-right:0px">
+        <p>
+           
+            <a href="/Gezilecekyer/Create" class="btn btn-outline-dark">
+                <span class="glyphicon glyphicon-plus"></span>Create
+            </a>
+        </p>
+        <table class="table">
+            <tr>
+                <th>
+                    @Html.DisplayNameFor(model => model.Baslik)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Resim)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Icerik)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.CreatedOn)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.ModifiedOn)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.ModifiedUsername)
+                </th>
+                <th></th>
+            </tr>
+
+            @foreach (var item in Model)
+            {
+                <tr>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Baslik)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Resim)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Icerik)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.CreatedOn)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.ModifiedOn)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.ModifiedUsername)
+                    </td>
+                    <td>
+                        <a href="/Gezilecekyer/Edit/@item.Id" class="btn btn-outline-dark">
+                            <span class="glyphicon glyphicon-edit"></span>Edit
+                        </a>
+                        <a href="/Gezilecekyer/Details/@item.Id" class="btn btn-outline-dark"style="padding-top:5px;">
+                            <span class="glyphicon glyphicon-search"></span>Details
+                        </a>
+                        <a href="/Gezilecekyer/Delete/@item.Id" class="btn btn-outline-dark" style="padding-top:5px;">
+                            <span class="glyphicon glyphicon-trash"></span>Delete
+                        </a>
+                       
+                    </td>
+                </tr>
+            }
+
+        </table>
+    </div>
+</div>
+
+<script>
+
+    function hideSlider() {
+        var element = document.getElementById('Silider');
+        var menu = document.getElementById("ftco-navbar");
+
+        element.hidden = true;
+    };
+    window.onload = hideSlider();
+</script>

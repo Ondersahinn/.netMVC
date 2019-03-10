@@ -1,0 +1,23 @@
+﻿@using SehrimiTani.Entities.ValueObjects
+@model YorumViewModel
+<link href="~/css/Yorumcss.css" rel="stylesheet" />
+@using (Html.BeginForm())
+{
+
+    <div class="comments">
+        <div class="comment-wrap">
+            @Html.ValidationSummary(false)
+            <div class="photo">
+                <div class="avatar" style="background-image: url('https://s3.amazonaws.com/uifaces/faces/twitter/dancounsell/128.jpg')"></div>
+            </div>
+            <div class="comment-block">
+                <form action="">
+
+                    @Html.TextArea(model=>model., new { @class = "form-control input-lg", placeholder = "Adınız", tabindex = "1" })
+
+                    <textarea name="" id="" cols="30" rows="3" placeholder="Add comment..."></textarea>
+                </form>
+            </div>
+        </div>
+    </div>
+}

@@ -1,0 +1,15 @@
+﻿@using SehrimiTani.BusinessLayer
+@using SehrimiTani.Entities 
+@{ 
+    UniversitelerManager um = new UniversitelerManager();
+    List<Universite> list = um.GetUniversiteler();
+ } 
+
+<div class="list-group">
+    <a href="#" class="list-group-item"><span class="glyphicon glyphicon-arrow-right"></span></a>
+
+    @foreach (Universite uni in list)
+    {
+        <a href="#" title="@uni.adi" class="list-group-item"><span class="glyphicon glyphicon-arrow-right">@uni.adi </span></a>
+    }
+</div>

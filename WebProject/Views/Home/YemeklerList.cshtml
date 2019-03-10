@@ -1,0 +1,49 @@
+﻿@using SehrimiTani.Entities
+@model List<Yemekler>
+@{
+
+    ViewBag.Title = "YemeklerList";
+}
+
+
+<link href="~/css/About.css" rel="stylesheet" />
+<link href="../netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+<script src="../netdna.bootstrapcdn.com/bootstrap/3.0.0/js/bootstrap.min.js"></script>
+<script src="../code.jquery.com/jquery-1.11.1.min.js"></script>
+<!------ Include the above in your HEAD tag ---------->
+<link href="//maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
+<div class="about-section paddingTB60 gray-bg">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-7 col-sm-6">
+                @foreach (Yemekler yemekler in Model)
+                {
+                    if (yemekler.YemeklerId == 1)
+                    {
+                        <div class="about-title clearfix">
+
+                            <h1> Mutlaka Tatmalısınız </h1>
+                            <h3>Orcik </h3>
+
+                            <p>
+                                @yemekler.Icerik
+                            </p>
+                        </div>
+                    }
+                }
+
+
+
+            </div>
+            <div class="col-md-5 col-sm-6">
+                <div class="about-img">
+
+                    <img src="https://devitems.com/preview/appmom/img/mobile/2.png" alt="">
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+@Html.Partial("_PartialYorumlar");

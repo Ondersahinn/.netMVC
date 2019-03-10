@@ -1,0 +1,66 @@
+﻿
+@using SehrimiTani.Entities
+@model List<Yemekler>
+
+@{
+    ViewBag.Title = "Yemekler";
+}
+
+<section class="ftco-section">
+    <div class="container-fluid">
+
+        <div class="row no-gutters" style="margin-left:200px;margin-top:-90px; ">
+            @foreach (Yemekler yemekler in Model)
+            {
+                <div class="col-md-6 col-lg-3 ftco-animate" style="margin-right:10px;margin-left:20px;margin-bottom:10px;">
+                    
+                        <div class="text">
+                            @if (yemekler.YemeklerId == 1)
+                            {
+                                <a href="/Home/YemeklerList" class="block-5" style="background-image: url('/images/orcik.jpg');"></a>
+                            }
+                            @if (yemekler.YemeklerId == 2)
+                            {
+                                <a href="/Home/YemeklerList" class="block-5" style="background-image: url('/images/etli-komb.jpg');"></a>
+                            }
+                            @if (yemekler.YemeklerId == 3)
+                            {
+                                <a href="/Home/YemeklerList" class="block-5" style="background-image: url('/images/ayran-corbasi-tarifi.jpg');"></a>
+                            }
+                            @if (yemekler.YemeklerId == 4)
+                            {
+                                <a href="/Home/YemeklerList" class="block-5" style="background-image: url('/images/icli-kofte.jpg');"></a>
+                            }
+                            @if (yemekler.YemeklerId == 5)
+                            {
+                                <a href="/Home/YemeklerList" class="block-5" style="background-image: url('/images/sirin.jpg');"></a>
+                            }
+                            @if (yemekler.YemeklerId == 6)
+                            {
+                                <a href="/Home/YemeklerList" class="block-5" style="background-image: url('/images/menengic.jpg');"></a>
+                            }
+
+                            <h3 class="heading">@yemekler.Icerik.Substring(0, 20)....</h3>
+
+                            <div class="post-meta">
+                                <span>
+
+                                </span>
+                            </div>
+                            <p class="star-rate">
+                                <span class="icon-star">
+                                </span><span class="icon-star"></span>
+                                <span class="icon-star"></span>
+                                <span class="icon-star"></span><span class="icon-star-half-full"></span>Yorumlar<span class="glyphicon glyphicon-star-empty"></span>
+                            </p>
+                        </div>
+                   
+                </div>
+
+            }
+
+        </div>
+
+    </div>
+</section>
+@Bootstrap.ModalPopup(id: "modal_yemekler",title:"Yemek Detayı")

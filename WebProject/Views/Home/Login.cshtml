@@ -1,0 +1,70 @@
+﻿@using SehrimiTani.Entities.ValueObjects
+@model LoginViewModel
+
+@{
+    ViewBag.Title = "Giriş Sayfası";
+}
+
+<link href="~/css/css/login-register.css" rel="stylesheet" />
+<script src="~/css/css/login-register.js"></script>
+<!------ Include the above in your HEAD tag ---------->
+<!-- <input type="text" name="display_name" id="display_name" class="form-control input-lg" placeholder="Kullanıcı Adınız" tabindex="3">-->
+<!-- input type="password" name="password" id="password" class="form-control input-lg" placeholder="Şifre" tabindex="5">  -->
+
+
+@using (Html.BeginForm())
+{
+
+    <div class="container" style="margin:auto;width: 70%;margin-left:400px;margin-bottom:20px;margin-top:50px">
+        <div class="row">
+            <div class="col-xs-12 col-sm-8 col-md-6 col-sm-offset-2 col-md-offset-3">
+                <form role="form">
+                    <h2>Üniversitenizi tanımanız için lütfen kayıt olun</h2>
+                    @Html.ValidationSummary(false)
+                    @if (ViewBag.SetLink != null)
+                    {
+                        <a href="@ViewBag.SetLink" class="btn btn-primary">Activate</a>
+                    }
+                    <hr class="colorgraph">
+
+                    <div class="form-group">
+
+                        @Html.TextBoxFor(model => model.KullaniciAdi, new { @class = "form-control input-lg", placeholder = "Kullanıcı Adınız", tabindex = "5" })
+                    </div>
+
+                    <div class="row">
+                        <div class="col-xs-12 col-sm-6 col-md-6">
+                            <div class="form-group">
+
+                                @Html.TextBoxFor(model => model.Sifre, new { @class = "form-control input-lg", placeholder = "Şifre", tabindex = "5", type = "password" })
+                            </div>
+                        </div>
+
+                    </div>
+
+
+                    <hr class="colorgraph">
+                    <div class="row">
+                        <div class="col-xs-12 col-md-6"><a href="/Home/Register" class="btn btn-primary btn-block btn-lg">Kayıt Ol</a></div>
+
+                        <div class="col-xs-12 col-md-6"><button type="submit" class="btn btn-success btn-block btn-lg">Giriş Yap</button></div>
+                    </div>
+                </form>
+            </div>
+        </div>
+
+        
+
+    </div>
+}
+
+<script>
+
+    function hideSlider() {
+        var element = document.getElementById('Silider');
+        var menu = document.getElementById("ftco-navbar");
+        menu.hidden = true;
+        element.hidden = true;
+    };
+    window.onload = hideSlider();
+</script>

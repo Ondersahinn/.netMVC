@@ -1,0 +1,5 @@
+C:\Users\OnderSahin\source\repos\WebProject\SehrimiTani.Core\bin\Debug\SehrimiTani.Core.dll
+C:\Users\OnderSahin\source\repos\WebProject\SehrimiTani.Core\bin\Debug\SehrimiTani.Core.pdb
+C:\Users\OnderSahin\source\repos\WebProject\SehrimiTani.Core\obj\Debug\SehrimiTani.Core.csproj.CoreCompileInputs.cache
+C:\Users\OnderSahin\source\repos\WebProject\SehrimiTani.Core\obj\Debug\SehrimiTani.Core.dll
+C:\Users\OnderSahin\source\repos\WebProject\SehrimiTani.Core\obj\Debug\SehrimiTani.Core.pdb

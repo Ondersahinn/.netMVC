@@ -1,0 +1,78 @@
+﻿@model SehrimiTani.Entities.Gezilecekyer
+
+@{
+    ViewBag.Title = "Create";
+}
+<link href="~/css/validation-summary.css" rel="stylesheet" />
+
+<div class="row"style="margin-left:350px;margin-top:150px;">
+    <div class="col-md-8 col-md-offset-2">
+        <h2>Create</h2>
+        <hr />
+    </div>
+   
+</div> 
+<div class="row" style="margin-left:350px;">
+    <div class="col-md-4 col-md-offset-2">
+
+        @using (Html.BeginForm())
+        {
+            @Html.AntiForgeryToken()
+
+            <div class="form-horizontal">
+                <h4>Gezilecekyer</h4>
+                <hr />
+                @Html.ValidationSummary(false)
+                <div class="form-group">
+                    @Html.LabelFor(model => model.Baslik, htmlAttributes: new { @class = "control-label col-md-2" })
+                    <div class="col-md-10">
+                        @Html.EditorFor(model => model.Baslik, new { htmlAttributes = new { @class = "form-control" } })
+
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    @Html.LabelFor(model => model.Resim, htmlAttributes: new { @class = "control-label col-md-2" })
+                    <div class="col-md-3 col-lg-3" style="">
+                        <img src="~/images/Harput-Kalesi.jpg" class="img-circle" width="128" height="128"style="margin-bottom:10px" />
+                        
+                        <input type="file" name="ProfileImage" id="ProfileImage" class="form-control" style="width:300px" /><br />
+                        <span class="glyphicon glyphicon-info-sign">&nbsp;</span>
+                        <span><i>Lütfen jpg, jpeg ya da png formatı kullanın.</i></span>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    @Html.LabelFor(model => model.Icerik, htmlAttributes: new { @class = "control-label col-md-2" })
+                    <div class="col-md-10">
+                        @Html.EditorFor(model => model.Icerik, new { htmlAttributes = new { @class = "form-control" } })
+
+                    </div>
+                </div>
+
+
+                <div class="form-group">
+                    <div class="col-md-offset-2 col-md-10">
+                        <button type="submit" class="btn btn-success">
+                            <span class="glyphicon glyphicon-plus">Ekle</span>
+                        </button>
+                        @Html.ActionLink("Back to List", "Index","Gezilecekyer",null,new { @class = "btn btn-primary" })
+                    </div>
+                </div>
+            </div>
+        }
+
+       
+
+    </div>
+</div>
+<script>
+
+    function hideSlider() {
+        var element = document.getElementById('Silider');
+        var menu = document.getElementById("ftco-navbar");
+
+        element.hidden = true;
+    };
+    window.onload = hideSlider();
+</script>
